@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-soil: #2C1F14;
+  --color-estate: #3D2B1F;
+  --color-bark: #5C4033;
+  --color-brass: #B08D57;
+  --color-cream: #FAF7F2;
+  --color-parchment: #F0EBE1;
+  --color-stone: #C4B49A;
+  --color-river: #4A6741;
+  --portal-bg: #1C140C;
+  --portal-surface: #2C1F14;
+  --portal-border: #3D2B1F;
+  --portal-text: #FAF7F2;
+  --portal-text-muted: #A89880;
+  --portal-accent: #B08D57;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--color-soil);
+  background-color: var(--color-cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .font-body {
+    font-family: 'DM Sans', sans-serif;
+  }
+  .font-mono {
+    font-family: 'DM Mono', monospace;
+  }
+  .eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded bg-brass px-6 py-3 font-body text-sm font-medium text-cream transition-colors hover:bg-bark;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded border border-soil/20 px-6 py-3 font-body text-sm font-medium text-soil transition-colors hover:bg-soil hover:text-cream;
+  }
+  .btn-ghost-dark {
+    @apply inline-flex items-center justify-center rounded border border-cream/20 px-6 py-3 font-body text-sm font-medium text-cream transition-colors hover:bg-cream/10;
+  }
+}
