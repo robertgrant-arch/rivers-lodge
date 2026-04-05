@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { UserButton, useUser } from '@clerk/nextjs'
+
 import { Badge } from '@/components/ui/badge'
 import { cn } from '@/lib/utils'
 
@@ -52,7 +52,7 @@ export function MembersNav({ unreadMessages = 0 }: { unreadMessages?: number }) 
           })}
         </div>
         <div className="px-4 py-4 border-t border-white/10 flex items-center gap-3">
-          <UserButton afterSignOutUrl="/" appearance={{ elements: { avatarBox: 'w-8 h-8' } }} />
+          
           {user && <div className="min-w-0"><p className="font-body text-xs truncate" style={{ color: 'var(--portal-text)' }}>{user.firstName} {user.lastName}</p><p className="font-mono text-[9px] tracking-wide uppercase truncate" style={{ color: 'var(--portal-text-muted)' }}>Member</p></div>}
         </div>
       </nav>

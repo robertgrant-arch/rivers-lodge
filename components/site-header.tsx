@@ -3,7 +3,7 @@ import { useEffect, useRef, useState, useCallback } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
-import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
+
 import { PRIMARY_NAV, SITE } from '@/lib/site'
 import { cn } from '@/lib/utils'
 
@@ -50,8 +50,8 @@ function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
           <div className="px-8 py-8 border-t border-white/10 flex items-center justify-between">
             <Link href="/weddings/inquire" className="btn-ghost-dark text-sm">Begin Inquiry</Link>
             <div className="flex items-center gap-4">
-              <SignedIn><Link href="/members" className="font-body text-xs text-cream/70 hover:text-cream">Member Portal</Link></SignedIn>
-              <SignedOut><Link href="/login" className="font-body text-xs text-cream/70 hover:text-cream">Member Login</Link></SignedOut>
+              <Link href="/members" className="font-body text-xs text-cream/70 hover:text-cream">Member Portal</Link>
+              <Link href="/login" className="font-body text-xs text-cream/70 hover:text-cream">Member Login</Link>
             </div>
           </div>
         </motion.div>
@@ -83,8 +83,8 @@ export function SiteHeader() {
             </nav>
             <div className="hidden lg:flex items-center gap-4">
               <Link href="/contact" className={cn('btn text-sm px-5 py-2 rounded border transition-colors duration-150', isScrolled || !hasDarkHero ? 'btn-ghost' : 'btn-ghost-dark')}>Book a Tour</Link>
-              <SignedIn><UserButton afterSignOutUrl="/" appearance={{ elements: { avatarBox: 'w-8 h-8' } }} /></SignedIn>
-              <SignedOut><Link href="/login" className={cn('font-body text-sm transition-colors duration-150', isScrolled || !hasDarkHero ? 'text-bark hover:text-soil' : 'text-cream/70 hover:text-cream')}>Members</Link></SignedOut>
+              
+              <Link href="/login" className={cn('font-body text-sm transition-colors duration-150', isScrolled || !hasDarkHero ? 'text-bark hover:text-soil' : 'text-cream/70 hover:text-cream')}>Members</Link>
             </div>
             <button onClick={() => setMobileOpen(true)} className={cn('lg:hidden p-2 -mr-2 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brass rounded', isScrolled || !hasDarkHero ? 'text-soil' : 'text-cream')} aria-label="Open menu" aria-expanded={mobileOpen}>
               <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden><line x1="2" y1="6" x2="20" y2="6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/><line x1="2" y1="11" x2="20" y2="11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/><line x1="2" y1="16" x2="20" y2="16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
