@@ -3,58 +3,56 @@
 @tailwind utilities;
 
 :root {
-  --color-soil: #2C1F14;
-  --color-estate: #3D2B1F;
-  --color-bark: #5C4033;
-  --color-brass: #B08D57;
-  --color-cream: #FAF7F2;
-  --color-parchment: #F0EBE1;
-  --color-stone: #C4B49A;
-  --color-river: #4A6741;
-  --portal-bg: #1C140C;
-  --portal-surface: #2C1F14;
-  --portal-border: #3D2B1F;
-  --portal-text: #FAF7F2;
-  --portal-text-muted: #A89880;
-  --portal-accent: #B08D57;
+  --color-soil: #2C1F14; --color-estate: #3D2B1F; --color-bark: #7A5C3A;
+  --color-cream: #F5F0E8; --color-parchment: #EDE6D6; --color-stone: #C4B49A;
+  --color-brass: #A8864A; --color-brass-light: #C4A870; --color-river: #4A5E5A;
+  --color-available: #E8EDE4; --color-hold: #F2E4C4; --color-booked: #C8B5A5; --color-closed: #D8D0C8;
+  --scrim-light: rgba(44,31,20,0.35); --scrim-medium: rgba(44,31,20,0.52); --scrim-heavy: rgba(44,31,20,0.72);
+  --portal-bg: #3D2B1F; --portal-surface: rgba(255,255,255,0.06); --portal-border: rgba(255,255,255,0.10);
+  --portal-text: #F0EBE2; --portal-text-muted: rgba(240,235,226,0.55); --portal-accent: #A8864A; --portal-focus: #C4A870;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'DM Sans', sans-serif;
-  color: var(--color-soil);
-  background-color: var(--color-cream);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
+  body { background-color: var(--color-cream); color: var(--color-soil); font-family: var(--font-dm-sans), system-ui, sans-serif; font-size: 1.125rem; line-height: 1.75rem; }
+  h1, h2, h3, h4, h5, h6 { font-family: var(--font-cormorant), Georgia, serif; font-weight: 300; line-height: 1.1; letter-spacing: 0.01em; }
+  img, video { max-width: 100%; height: auto; }
+  :focus-visible { outline: 2px solid var(--color-brass); outline-offset: 2px; border-radius: 2px; }
+  .portal-surface :focus-visible { outline: 2px solid var(--portal-focus); outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 200ms !important; } }
 }
 
 @layer components {
-  .font-display {
-    font-family: 'Cormorant Garamond', serif;
-  }
-  .font-body {
-    font-family: 'DM Sans', sans-serif;
-  }
-  .font-mono {
-    font-family: 'DM Mono', monospace;
-  }
-  .eyebrow {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.6875rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    line-height: 1;
-  }
-  .btn-primary {
-    @apply inline-flex items-center justify-center rounded bg-brass px-6 py-3 font-body text-sm font-medium text-cream transition-colors hover:bg-bark;
-  }
-  .btn-ghost {
-    @apply inline-flex items-center justify-center rounded border border-soil/20 px-6 py-3 font-body text-sm font-medium text-soil transition-colors hover:bg-soil hover:text-cream;
-  }
-  .btn-ghost-dark {
-    @apply inline-flex items-center justify-center rounded border border-cream/20 px-6 py-3 font-body text-sm font-medium text-cream transition-colors hover:bg-cream/10;
-  }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded px-6 py-3 font-body text-sm font-medium tracking-wide transition-colors duration-150 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2; }
+  .btn-primary { @apply btn bg-brass text-soil hover:bg-brass-light focus-visible:ring-brass; }
+  .btn-ghost { @apply btn bg-transparent border border-stone text-soil hover:bg-parchment focus-visible:ring-brass; }
+  .btn-ghost-dark { @apply btn bg-transparent border border-stone text-cream hover:bg-white/[0.08] hover:border-cream focus-visible:ring-brass-light; }
+  .btn-text { @apply inline-flex items-center gap-1.5 font-body text-sm font-medium text-soil underline-offset-4 hover:underline transition-colors duration-150; }
+  .card { @apply bg-parchment border border-stone rounded transition-[box-shadow,transform] duration-200 ease-out; }
+  .card-hover { @apply card hover:shadow-[0_4px_24px_rgba(44,31,20,0.08)] hover:-translate-y-0.5; }
+  .portal-card { @apply rounded border transition-[border-color,box-shadow,transform] duration-200 ease-out; background: var(--portal-surface); border-color: var(--portal-border); }
+  .portal-card-hover { @apply portal-card hover:shadow-[0_4px_24px_rgba(0,0,0,0.30)] hover:-translate-y-0.5; }
+  .portal-card-hover:hover { border-color: rgba(255,255,255,0.22); }
+  .eyebrow { @apply font-mono text-xs tracking-[0.15em] uppercase text-bark; }
+  .display-xl { @apply font-display font-light text-display-xl; }
+  .display-lg { @apply font-display font-light text-display-lg; }
+  .display-md { @apply font-display font-light text-display-md; }
+  .display-sm { @apply font-display font-light text-display-sm; }
+  .divider { @apply border-t border-stone; }
+  .field-label { @apply block font-body text-sm font-medium text-bark mb-1.5; }
+  .field-input { @apply w-full rounded border border-stone bg-cream px-4 py-3 font-body text-base text-soil placeholder:text-stone transition-colors duration-150 focus:outline-none focus:border-brass focus:ring-0; }
+  .field-error { @apply mt-1.5 font-body text-sm text-bark; }
+  .field-textarea { @apply field-input resize-none; }
+  .field-select { @apply field-input appearance-none cursor-pointer; }
+}
+
+@layer utilities {
+  .hero-full { @apply relative h-[100dvh] w-full overflow-hidden; }
+  .overlay-medium { @apply absolute inset-0; background: linear-gradient(to bottom, rgba(44,31,20,0.10) 0%, rgba(44,31,20,0.52) 100%); }
+  .overlay-heavy { @apply absolute inset-0; background: linear-gradient(to bottom, rgba(44,31,20,0.20) 0%, rgba(44,31,20,0.72) 100%); }
+  .portal-ground { background-color: var(--portal-bg); color: var(--portal-text); }
+  .text-balance { text-wrap: balance; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
 }
