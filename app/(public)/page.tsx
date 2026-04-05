@@ -15,18 +15,18 @@ export const revalidate = 60
 
 const GALLERY_TEASE: GalleryImage[] = [
   { src: 'https://theriverslodge.com/wp-content/uploads/2023/03/Anderegg-531_websize.jpg', alt: 'The Marais des Cygnes River at dawn, viewed from the lodge grounds', featured: true },
-  { src: 'https://hctg-images.imgix.net/images/venues/rivers-lodge-and-hunt-club/20260127RiversLodgeAndHuntClub12.jpg?auto=format%2Ccompress&fit=clamp&w=800', alt: 'Outdoor ceremony arch surrounded by tall grass and open sky' },
-  { src: 'https://theriverslodge.com/wp-content/uploads/2023/03/Anderegg-531_websize.jpg', alt: 'Lodge great room with warm timber and stone fireplace' },
-  { src: 'https://theriverslodge.com/wp-content/uploads/2023/03/Anderegg-531_websize.jpg', alt: 'Reception tables set at golden hour on the estate lawn' },
-  { src: 'https://theriverslodge.com/wp-content/uploads/2023/03/Anderegg-531_websize.jpg', alt: 'Duck blind at sunrise on the Marais des Cygnes' },
-  { src: 'https://theriverslodge.com/wp-content/uploads/2023/03/Anderegg-531_websize.jpg', alt: 'Aerial view of the 300-acre estate and river corridor' },
+  { src: 'https://theriverslodge.com/wp-content/uploads/2023/03/Anderegg-422_websize.jpg', alt: 'Outdoor ceremony arch surrounded by tall grass and open sky' },
+  { src: 'https://theriverslodge.com/wp-content/uploads/2023/03/Anderegg-543_websize.jpg', alt: 'Lodge great room with warm timber and stone fireplace' },
+  { src: 'https://theriverslodge.com/wp-content/uploads/2023/03/Anderegg-694_websize.jpg', alt: 'Reception tables set at golden hour on the estate lawn' },
+  { src: 'https://theriverslodge.com/wp-content/uploads/2023/03/Anderegg-660_websize.jpg', alt: 'Duck blind at sunrise on the Marais des Cygnes' },
+  { src: 'https://theriverslodge.com/wp-content/uploads/2023/03/Anderegg-389_websize.jpg', alt: 'Aerial view of the 300-acre estate and river corridor' },
 ]
 
 export default function HomePage() {
   const muxId = publicConfig.mux.heroPlaybackId
   return (
     <>
-      <HeroFull muxPlaybackId={muxId || undefined} imageSrc="https://hctg-images.imgix.net/images/venues/rivers-lodge-and-hunt-club/20260127RiversLodgeAndHuntClub01.jpg?auto=format%2Ccompress&fit=clamp&w=1920" imageAlt="The Marais des Cygnes River at dusk, viewed across the Rivers Lodge grounds" eyebrow={`${SITE.location.city}, ${SITE.location.state}`} headline="Rivers Lodge & Hunt Club" subline={SITE.tagline} showScroll actions={[{ label: 'Explore the Estate', href: '/estate', variant: 'ghost-dark' }, { label: 'Plan Your Wedding', href: '/weddings', variant: 'ghost-dark' }]} />
+      <HeroFull muxPlaybackId={muxId || undefined} imageSrc="https://theriverslodge.com/wp-content/uploads/2023/03/Anderegg-389_websize.jpg" imageAlt="The Marais des Cygnes River at dusk, viewed across the Rivers Lodge grounds" eyebrow={`${SITE.location.city}, ${SITE.location.state}`} headline="Rivers Lodge & Hunt Club" subline={SITE.tagline} showScroll actions={[{ label: 'Explore the Estate', href: '/estate', variant: 'ghost-dark' }, { label: 'Plan Your Wedding', href: '/weddings', variant: 'ghost-dark' }]} />
       <Section background="cream" className="py-20 lg:py-28">
         <Container width="prose" className="text-center">
           <p className="eyebrow mb-5">The Marais des Cygnes</p>
@@ -34,12 +34,12 @@ export default function HomePage() {
           <p className="font-body text-base text-bark leading-relaxed">Rivers Lodge is a working private estate — not a resort, not a venue catalog. The land has been tended with purpose: the water holds fish, the fields hold game, and the spaces hold the kind of gatherings that people talk about for the rest of their lives. You are not renting a location. You are arriving somewhere.</p>
         </Container>
       </Section>
-      <ThreeColumnPillar items={[{ imageSrc: 'https://hctg-images.imgix.net/images/venues/rivers-lodge-and-hunt-club/20260127RiversLodgeAndHuntClub12.jpg?auto=format%2Ccompress&fit=clamp&w=800', imageAlt: 'Bride and groom at the ceremony arch overlooking the river', label: 'Weddings', description: 'Your wedding, without compromise.', href: '/weddings', ctaLabel: 'See wedding experiences' }, { imageSrc: 'https://theriverslodge.com/wp-content/uploads/2023/03/Anderegg-531_websize.jpg', imageAlt: 'The lodge exterior at golden hour with the river in the background', label: 'The Estate', description: 'A private retreat for the people who matter.', href: '/estate', ctaLabel: 'Explore the estate' }, { imageSrc: 'https://theriverslodge.com/wp-content/uploads/2023/03/Anderegg-543_websize.jpg', imageAlt: 'Morning light over the duck marsh on the Marais des Cygnes', label: 'Membership', description: 'Access to the land and the seasons.', href: '/membership', ctaLabel: 'Explore membership' }]} />
+      <ThreeColumnPillar items={[{ imageSrc: 'https://theriverslodge.com/wp-content/uploads/2023/03/Anderegg-456_websize.jpg', imageAlt: 'Bride and groom at the ceremony arch overlooking the river', label: 'Weddings', description: 'Your wedding, without compromise.', href: '/weddings', ctaLabel: 'See wedding experiences' }, { imageSrc: 'https://theriverslodge.com/wp-content/uploads/2023/03/Anderegg-531_websize.jpg', imageAlt: 'The lodge exterior at golden hour with the river in the background', label: 'The Estate', description: 'A private retreat for the people who matter.', href: '/estate', ctaLabel: 'Explore the estate' }, { imageSrc: 'https://theriverslodge.com/wp-content/uploads/2023/03/Anderegg-543_websize.jpg', imageAlt: 'Morning light over the duck marsh on the Marais des Cygnes', label: 'Membership', description: 'Access to the land and the seasons.', href: '/membership', ctaLabel: 'Explore membership' }]} />
       <EditorialSplit imageSrc="https://theriverslodge.com/wp-content/uploads/2023/03/Anderegg-389_websize.jpg" imageAlt="The Marais des Cygnes River corridor from the north field" imageLeft eyebrow={`La Cygne, Kansas — ${SITE.location.acres} acres`} headline="Where the river sets the calendar." body={['The Marais des Cygnes moves slowly in summer and rises urgently in spring. The fields drain into it and the timber grows along its banks for miles. Three hundred acres of this land belong to Rivers Lodge — and to the members and guests who know it.', 'The estate sits roughly an hour south of Kansas City, which means it is close enough to reach on a Friday evening and far enough that it feels like a genuine departure. The seasons here are not metaphors. They are on the calendar.']} actions={[{ label: 'Explore the estate', href: '/estate', variant: 'ghost' }]} />
       <section className="relative w-full overflow-hidden" style={{ minHeight: '520px' }}>
         <div className="absolute inset-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="https://hctg-images.imgix.net/images/venues/rivers-lodge-and-hunt-club/20260127RiversLodgeAndHuntClub01.jpg?auto=format%2Ccompress&fit=clamp&w=1920" alt="Wedding ceremony on the Rivers Lodge estate lawn at golden hour" className="w-full h-full object-cover" loading="lazy" />
+          <img src="https://theriverslodge.com/wp-content/uploads/2023/03/Anderegg-422_websize.jpg" alt="Wedding ceremony on the Rivers Lodge estate lawn at golden hour" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(44,31,20,0.05) 0%, rgba(44,31,20,0.65) 100%)' }} aria-hidden />
         </div>
         <div className="relative z-10 flex flex-col items-center justify-end text-center px-6 py-20 lg:py-28" style={{ minHeight: '520px' }}>
