@@ -9,14 +9,14 @@ import { Button } from '@/components/ui/button'
 export const metadata: Metadata = buildMetadata({ title: 'Lodging & Grounds', description: 'Stay at Rivers Lodge — overnight accommodations on the estate.', path: '/lodging' })
 export const revalidate = 300
 const ROOMS = [
-  { name: 'The Great Room Suite', description: 'The flagship room opens directly onto the great room and looks out toward the timber. King bed, stone fireplace, and a bath finished in river slate.', features: ['King bed', 'Stone fireplace', 'Private bath', 'River views'], image: '/images/lodging/great-room-suite.jpg', alt: 'Great Room Suite with stone fireplace' },
-  { name: 'The River Rooms', description: 'Four guest rooms on the eastern wing, each with direct sightlines to the Marais des Cygnes. Designed for quiet mornings and early starts.', features: ['Queen or king beds', 'Private baths', 'East-facing windows', 'Ground-floor access'], image: '/images/lodging/river-rooms.jpg', alt: 'River Room at sunrise' },
-  { name: 'The Loft Rooms', description: 'Two upper-level rooms with exposed timber and views across the south field. Ideal for wedding party accommodations.', features: ['Queen beds', 'Shared bath access', 'Open-timber ceiling', 'Field views'], image: '/images/lodging/loft-rooms.jpg', alt: 'Loft room with exposed timber beams' },
+  { name: 'The Great Room Suite', description: 'The flagship room opens directly onto the great room and looks out toward the timber. King bed, stone fireplace, and a bath finished in river slate.', features: ['King bed', 'Stone fireplace', 'Private bath', 'River views'], image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80', alt: 'Great Room Suite with stone fireplace' },
+  { name: 'The River Rooms', description: 'Four guest rooms on the eastern wing, each with direct sightlines to the Marais des Cygnes. Designed for quiet mornings and early starts.', features: ['Queen or king beds', 'Private baths', 'East-facing windows', 'Ground-floor access'], image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80', alt: 'River Room at sunrise' },
+  { name: 'The Loft Rooms', description: 'Two upper-level rooms with exposed timber and views across the south field. Ideal for wedding party accommodations.', features: ['Queen beds', 'Shared bath access', 'Open-timber ceiling', 'Field views'], image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80', alt: 'Loft room with exposed timber beams' },
 ]
 export default function LodgingPage() {
   return (
     <>
-      <HeroFull imageSrc="/images/lodging/hero.jpg" imageAlt="Lodge great room at dusk" eyebrow="Lodging & Grounds" headline="Stay on the property." subline="The lodge sleeps your party and keeps everyone in the same place — the way a wedding weekend or a retreat should work." height="large" actions={[{ label: 'Inquire about lodging', href: '/contact', variant: 'ghost-dark' }]} />
+      <HeroFull imageSrc="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80" imageAlt="Lodge great room at dusk" eyebrow="Lodging & Grounds" headline="Stay on the property." subline="The lodge sleeps your party and keeps everyone in the same place — the way a wedding weekend or a retreat should work." height="large" actions={[{ label: 'Inquire about lodging', href: '/contact', variant: 'ghost-dark' }]} />
       <Section background="parchment">
         <Container width="layout">
           <SectionHeader eyebrow="Accommodations" headline="Where you sleep matters." align="center" />
@@ -34,13 +34,13 @@ export default function LodgingPage() {
           </div>
         </Container>
       </Section>
-      <EditorialSplit imageSrc="/images/estate/grounds-wide.jpg" imageAlt="Estate grounds at sunrise" imageLeft={false} eyebrow="The Grounds" headline="Three hundred acres and no reason to leave." body={['Guests staying at the lodge have access to the full property — the river, the trails through the timber, the fields, and the event spaces.', 'For members, this access extends across the seasons. For wedding and retreat guests, it means a property that is genuinely yours for the duration of your stay.']} />
+      <EditorialSplit imageSrc="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80" imageAlt="Estate grounds at sunrise" imageLeft={false} eyebrow="The Grounds" headline="Three hundred acres and no reason to leave." body={['Guests staying at the lodge have access to the full property — the river, the trails through the timber, the fields, and the event spaces.', 'For members, this access extends across the seasons. For wedding and retreat guests, it means a property that is genuinely yours for the duration of your stay.']} />
       <Section background="cream">
         <Container width="layout">
           <SectionHeader eyebrow="Location" headline="An hour south of Kansas City." subline="La Cygne, Kansas — close enough to reach on a Friday evening, far enough to feel like a genuine departure." align="center" />
           <div className="mt-8 overflow-hidden rounded">
             <a href="https://maps.google.com/?q=La+Cygne+KS" target="_blank" rel="noopener noreferrer" aria-label="View Rivers Lodge location on Google Maps">
-              <Image src="/images/map-la-cygne.jpg" alt="Map showing Rivers Lodge location in La Cygne, Kansas" width={1200} height={480} className="w-full object-cover hover:opacity-90 transition-opacity" quality={85} />
+              <Image src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=600&q=80" alt="Map showing Rivers Lodge location in La Cygne, Kansas" width={1200} height={480} className="w-full object-cover hover:opacity-90 transition-opacity" quality={85} />
             </a>
           </div>
         </Container>

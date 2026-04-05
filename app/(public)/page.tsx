@@ -14,19 +14,19 @@ export const metadata: Metadata = buildMetadata({ description: 'Rivers Lodge and
 export const revalidate = 60
 
 const GALLERY_TEASE: GalleryImage[] = [
-  { src: '/images/gallery/estate-river.jpg', alt: 'The Marais des Cygnes River at dawn, viewed from the lodge grounds', featured: true },
-  { src: '/images/gallery/ceremony-arch.jpg', alt: 'Outdoor ceremony arch surrounded by tall grass and open sky' },
-  { src: '/images/gallery/lodge-interior.jpg', alt: 'Lodge great room with warm timber and stone fireplace' },
-  { src: '/images/gallery/reception-evening.jpg', alt: 'Reception tables set at golden hour on the estate lawn' },
-  { src: '/images/gallery/duck-blind-morning.jpg', alt: 'Duck blind at sunrise on the Marais des Cygnes' },
-  { src: '/images/gallery/aerial-grounds.jpg', alt: 'Aerial view of the 300-acre estate and river corridor' },
+  { src: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80', alt: 'The Marais des Cygnes River at dawn, viewed from the lodge grounds', featured: true },
+  { src: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80', alt: 'Outdoor ceremony arch surrounded by tall grass and open sky' },
+  { src: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80', alt: 'Lodge great room with warm timber and stone fireplace' },
+  { src: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80', alt: 'Reception tables set at golden hour on the estate lawn' },
+  { src: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80', alt: 'Duck blind at sunrise on the Marais des Cygnes' },
+  { src: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80', alt: 'Aerial view of the 300-acre estate and river corridor' },
 ]
 
 export default function HomePage() {
   const muxId = publicConfig.mux.heroPlaybackId
   return (
     <>
-      <HeroFull muxPlaybackId={muxId || undefined} imageSrc="/images/hero/hero-still.jpg" imageAlt="The Marais des Cygnes River at dusk, viewed across the Rivers Lodge grounds" eyebrow={`${SITE.location.city}, ${SITE.location.state}`} headline="Rivers Lodge & Hunt Club" subline={SITE.tagline} showScroll actions={[{ label: 'Explore the Estate', href: '/estate', variant: 'ghost-dark' }, { label: 'Plan Your Wedding', href: '/weddings', variant: 'ghost-dark' }]} />
+      <HeroFull muxPlaybackId={muxId || undefined} imageSrc="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1920&q=80" imageAlt="The Marais des Cygnes River at dusk, viewed across the Rivers Lodge grounds" eyebrow={`${SITE.location.city}, ${SITE.location.state}`} headline="Rivers Lodge & Hunt Club" subline={SITE.tagline} showScroll actions={[{ label: 'Explore the Estate', href: '/estate', variant: 'ghost-dark' }, { label: 'Plan Your Wedding', href: '/weddings', variant: 'ghost-dark' }]} />
       <Section background="cream" className="py-20 lg:py-28">
         <Container width="prose" className="text-center">
           <p className="eyebrow mb-5">The Marais des Cygnes</p>
@@ -34,12 +34,12 @@ export default function HomePage() {
           <p className="font-body text-base text-bark leading-relaxed">Rivers Lodge is a working private estate — not a resort, not a venue catalog. The land has been tended with purpose: the water holds fish, the fields hold game, and the spaces hold the kind of gatherings that people talk about for the rest of their lives. You are not renting a location. You are arriving somewhere.</p>
         </Container>
       </Section>
-      <ThreeColumnPillar items={[{ imageSrc: '/images/pillars/weddings.jpg', imageAlt: 'Bride and groom at the ceremony arch overlooking the river', label: 'Weddings', description: 'Your wedding, without compromise.', href: '/weddings', ctaLabel: 'See wedding experiences' }, { imageSrc: '/images/pillars/estate.jpg', imageAlt: 'The lodge exterior at golden hour with the river in the background', label: 'The Estate', description: 'A private retreat for the people who matter.', href: '/estate', ctaLabel: 'Explore the estate' }, { imageSrc: '/images/pillars/membership.jpg', imageAlt: 'Morning light over the duck marsh on the Marais des Cygnes', label: 'Membership', description: 'Access to the land and the seasons.', href: '/membership', ctaLabel: 'Explore membership' }]} />
-      <EditorialSplit imageSrc="/images/estate/river-wide.jpg" imageAlt="The Marais des Cygnes River corridor from the north field" imageLeft eyebrow={`La Cygne, Kansas — ${SITE.location.acres} acres`} headline="Where the river sets the calendar." body={['The Marais des Cygnes moves slowly in summer and rises urgently in spring. The fields drain into it and the timber grows along its banks for miles. Three hundred acres of this land belong to Rivers Lodge — and to the members and guests who know it.', 'The estate sits roughly an hour south of Kansas City, which means it is close enough to reach on a Friday evening and far enough that it feels like a genuine departure. The seasons here are not metaphors. They are on the calendar.']} actions={[{ label: 'Explore the estate', href: '/estate', variant: 'ghost' }]} />
+      <ThreeColumnPillar items={[{ imageSrc: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80', imageAlt: 'Bride and groom at the ceremony arch overlooking the river', label: 'Weddings', description: 'Your wedding, without compromise.', href: '/weddings', ctaLabel: 'See wedding experiences' }, { imageSrc: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80', imageAlt: 'The lodge exterior at golden hour with the river in the background', label: 'The Estate', description: 'A private retreat for the people who matter.', href: '/estate', ctaLabel: 'Explore the estate' }, { imageSrc: 'https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&q=80', imageAlt: 'Morning light over the duck marsh on the Marais des Cygnes', label: 'Membership', description: 'Access to the land and the seasons.', href: '/membership', ctaLabel: 'Explore membership' }]} />
+      <EditorialSplit imageSrc="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80" imageAlt="The Marais des Cygnes River corridor from the north field" imageLeft eyebrow={`La Cygne, Kansas — ${SITE.location.acres} acres`} headline="Where the river sets the calendar." body={['The Marais des Cygnes moves slowly in summer and rises urgently in spring. The fields drain into it and the timber grows along its banks for miles. Three hundred acres of this land belong to Rivers Lodge — and to the members and guests who know it.', 'The estate sits roughly an hour south of Kansas City, which means it is close enough to reach on a Friday evening and far enough that it feels like a genuine departure. The seasons here are not metaphors. They are on the calendar.']} actions={[{ label: 'Explore the estate', href: '/estate', variant: 'ghost' }]} />
       <section className="relative w-full overflow-hidden" style={{ minHeight: '520px' }}>
         <div className="absolute inset-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/weddings/ceremony-wide.jpg" alt="Wedding ceremony on the Rivers Lodge estate lawn at golden hour" className="w-full h-full object-cover" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80" alt="Wedding ceremony on the Rivers Lodge estate lawn at golden hour" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(44,31,20,0.05) 0%, rgba(44,31,20,0.65) 100%)' }} aria-hidden />
         </div>
         <div className="relative z-10 flex flex-col items-center justify-end text-center px-6 py-20 lg:py-28" style={{ minHeight: '520px' }}>
