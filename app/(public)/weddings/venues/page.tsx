@@ -8,15 +8,15 @@ import { Button } from '@/components/ui/button'
 export const metadata: Metadata = buildMetadata({ title: 'Wedding Venue Spaces', description: 'Wedding venue spaces at Rivers Lodge.', path: '/weddings/venues' })
 export const revalidate = 300
 const ALL_SPACES: VenueSpace[] = [
-  { name: 'The River Lawn', type: 'outdoor', ceremonyCapacity: 200, receptionCapacity: 180, description: 'A level grass expanse with direct sightlines to the Marais des Cygnes. The river moves slowly beyond the tree line. The sky opens in every direction.', imageSrc: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80', imageAlt: 'River Lawn ceremony space' },
-  { name: 'The Timber Edge', type: 'outdoor', ceremonyCapacity: 120, description: 'Where the open field meets the tree line — a naturally framed setting with the enclosure of timber on three sides and open sky above.', imageSrc: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80', imageAlt: 'Timber Edge ceremony space' },
-  { name: 'The Lodge Terrace', type: 'both', ceremonyCapacity: 60, receptionCapacity: 80, description: 'The stone terrace directly adjacent to the lodge entrance. Ideal for rehearsal dinners, intimate ceremonies, and cocktail hours.', imageSrc: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80', imageAlt: 'Lodge Terrace with stone pavers' },
-  { name: 'The Event Pavilion', type: 'both', receptionCapacity: 200, description: 'A purpose-built structure that bridges interior and exterior. Overhead doors open on two sides to the evening air.', imageSrc: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80', imageAlt: 'Event Pavilion set for an evening reception' },
+  { name: 'The River Lawn', type: 'outdoor', ceremonyCapacity: 200, receptionCapacity: 180, description: 'A level grass expanse with direct sightlines to the Marais des Cygnes. The river moves slowly beyond the tree line. The sky opens in every direction.', imageSrc: 'https://theriverslodge.com/wp-content/uploads/2023/03/Anderegg-531_websize.jpg', imageAlt: 'River Lawn ceremony space' },
+  { name: 'The Timber Edge', type: 'outdoor', ceremonyCapacity: 120, description: 'Where the open field meets the tree line — a naturally framed setting with the enclosure of timber on three sides and open sky above.', imageSrc: 'https://theriverslodge.com/wp-content/uploads/2023/03/Anderegg-531_websize.jpg', imageAlt: 'Timber Edge ceremony space' },
+  { name: 'The Lodge Terrace', type: 'both', ceremonyCapacity: 60, receptionCapacity: 80, description: 'The stone terrace directly adjacent to the lodge entrance. Ideal for rehearsal dinners, intimate ceremonies, and cocktail hours.', imageSrc: 'https://theriverslodge.com/wp-content/uploads/2023/03/Anderegg-531_websize.jpg', imageAlt: 'Lodge Terrace with stone pavers' },
+  { name: 'The Event Pavilion', type: 'both', receptionCapacity: 200, description: 'A purpose-built structure that bridges interior and exterior. Overhead doors open on two sides to the evening air.', imageSrc: 'https://theriverslodge.com/wp-content/uploads/2023/03/Anderegg-531_websize.jpg', imageAlt: 'Event Pavilion set for an evening reception' },
 ]
 export default function WeddingVenuesPage() {
   return (
     <>
-      <HeroFull imageSrc="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80" imageAlt="River Lawn ceremony in late afternoon light" eyebrow="Venue Spaces" headline="Every space faces something worth looking at." height="large" />
+      <HeroFull imageSrc="https://theriverslodge.com/wp-content/uploads/2023/03/Anderegg-531_websize.jpg" imageAlt="River Lawn ceremony in late afternoon light" eyebrow="Venue Spaces" headline="Every space faces something worth looking at." height="large" />
       <Section background="parchment" flushTop>
         <Container width="layout">
           <div className="space-y-8">{ALL_SPACES.map((space, i) => <VenueSpaceCard key={space.name} space={space} imageRight={i % 2 === 1} />)}</div>

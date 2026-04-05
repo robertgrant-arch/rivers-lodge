@@ -42,7 +42,7 @@ export default function ContactPage() {
               </div>
               <Divider />
               <a href="https://maps.google.com/?q=La+Cygne+KS" target="_blank" rel="noopener noreferrer" className="block overflow-hidden rounded hover:opacity-90 transition-opacity" aria-label="View on Google Maps">
-                <Image src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=600&q=80" alt="Map showing La Cygne, Kansas — approximately one hour south of Kansas City" width={600} height={280} className="w-full object-cover" quality={80} />
+                <Image src="https://theriverslodge.com/wp-content/uploads/2022/10/Rivers_SEPT2022_-29-1.jpg" alt="Map showing La Cygne, Kansas — approximately one hour south of Kansas City" width={600} height={280} className="w-full object-cover" quality={80} />
               </a>
             </div>
           </div>
