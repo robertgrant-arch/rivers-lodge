@@ -7,7 +7,7 @@ import { Section, SectionHeader } from '@/components/ui/section'
 import { Container } from '@/components/ui/container'
 import { Button } from '@/components/ui/button'
 
-export const metadata: Metadata = buildMetadata({ title: 'Lodging & Grounds', description: 'Stay at Rivers Lodge \u2014 The Lodge, Riverhouse Suites, The Annex, and Ohana House accommodate your entire group on the estate.', path: '/lodging' })
+export const metadata: Metadata = buildMetadata({ title: 'Lodging & Grounds', description: 'Stay at Rivers Lodge — The Lodge, Riverhouse Suites, The Annex, and Ohana House accommodate your entire group on the estate.', path: '/lodging' })
 export const revalidate = 300
 
 const ACCOMMODATIONS = [
@@ -27,7 +27,7 @@ const ACCOMMODATIONS = [
   },
   {
     name: 'The Annex & Bridal Suite',
-    description: 'Completely remodeled in 2021 with a modern farmhouse aesthetic \u2014 light, airy, and just steps from the barn. Four bedrooms and three bathrooms make it the perfect place for the wedding party to get ready.',
+    description: 'Completely remodeled in 2021 with a modern farmhouse aesthetic — light, airy, and just steps from the barn. Four bedrooms and three bathrooms make it the perfect place for the wedding party to get ready.',
     features: ['4 bedrooms', '3 bathrooms', 'Modern farmhouse design', 'Adjacent to the barn'],
     image: 'https://theriverslodge.com/wp-content/uploads/2023/06/Rivers_May2023-15.jpg',
     alt: 'The Annex bridal suite interior with natural light',
@@ -44,10 +44,10 @@ const ACCOMMODATIONS = [
 export default function LodgingPage() {
   return (
     <>
-      <HeroFull imageSrc="https://theriverslodge.com/wp-content/uploads/2022/10/974A8432edit.jpg" imageAlt="Lodge great room with stone fireplace and designer interiors" eyebrow="Lodging & Grounds" headline="Stay on the property." subline="The estate sleeps your entire party and keeps everyone in the same place \u2014 the way a wedding weekend or a retreat should work." height="large" actions={[{ label: 'Inquire about lodging', href: '/contact', variant: 'ghost-dark' }]} />
+      <HeroFull imageSrc="https://theriverslodge.com/wp-content/uploads/2022/10/974A8432edit.jpg" imageAlt="Lodge great room with stone fireplace and designer interiors" eyebrow="Lodging & Grounds" headline="Stay on the property." subline="The estate sleeps your entire party and keeps everyone in the same place — the way a wedding weekend or a retreat should work." height="large" actions={[{ label: 'Inquire about lodging', href: '/contact', variant: 'ghost-dark' }]} />
       <Section background="parchment">
         <Container width="layout">
-          <SectionHeader eyebrow="Accommodations" headline="Where you sleep matters." subline="Four distinct buildings across the estate \u2014 each with its own character, all with the comfort your group deserves." align="center" />
+          <SectionHeader eyebrow="Accommodations" headline="Where you sleep matters." subline="Four distinct buildings across the estate — each with its own character, all with the comfort your group deserves." align="center" />
           <div className="space-y-20">
             {ACCOMMODATIONS.map((room, i) => (
               <div key={room.name} className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center ${i % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''}`}>
@@ -62,7 +62,7 @@ export default function LodgingPage() {
           </div>
         </Container>
       </Section>
-      <EditorialSplit imageSrc="https://theriverslodge.com/wp-content/uploads/2022/10/Rivers_SEPT2022_-29-1.jpg" imageAlt="Aerial view of the Rivers Lodge estate at golden hour" imageLeft={false} eyebrow="The Grounds" headline="Three hundred acres and no reason to leave." body={['Guests staying on the property have access to the full estate \u2014 the river, the trails through the timber, the fields, and the event spaces.', 'For wedding and retreat guests, it means a property that is genuinely yours for the duration of your stay. An hour south of Kansas City, close enough to reach on a Friday evening and far enough to feel like a genuine departure.']} />
+      <EditorialSplit imageSrc="https://theriverslodge.com/wp-content/uploads/2022/10/Rivers_SEPT2022_-29-1.jpg" imageAlt="Aerial view of the Rivers Lodge estate at golden hour" imageLeft={false} eyebrow="The Grounds" headline="Three hundred acres and no reason to leave." body={['Guests staying on the property have access to the full estate — the river, the trails through the timber, the fields, and the event spaces.', 'For wedding and retreat guests, it means a property that is genuinely yours for the duration of your stay. An hour south of Kansas City, close enough to reach on a Friday evening and far enough to feel like a genuine departure.']} />
       <section className="relative w-full overflow-hidden" style={{ minHeight: '480px' }}>
         <div className="absolute inset-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -72,12 +72,12 @@ export default function LodgingPage() {
         <div className="relative z-10 flex flex-col items-center justify-end text-center px-6 py-16 lg:py-24" style={{ minHeight: '480px' }}>
           <p className="eyebrow text-cream/60 mb-4">The Lodge</p>
           <h2 className="font-display font-light text-cream text-balance mb-4" style={{ fontSize: 'clamp(1.75rem, 3.5vw, 3rem)', lineHeight: 1.1 }}>A full bar. A canoe on the ceiling. And the kind of night you talk about for years.</h2>
-          <p className="font-body text-cream/70 text-lg max-w-xl mx-auto mb-8 leading-relaxed">The Lodge is the social center of the property \u2014 a place where the rehearsal dinner turns into a late-night card game and the morning starts with coffee on the balcony.</p>
+          <p className="font-body text-cream/70 text-lg max-w-xl mx-auto mb-8 leading-relaxed">The Lodge is the social center of the property — a place where the rehearsal dinner turns into a late-night card game and the morning starts with coffee on the balcony.</p>
         </div>
       </section>
       <Section background="cream">
         <Container width="layout">
-          <SectionHeader eyebrow="Location" headline="An hour south of Kansas City." subline="La Cygne, Kansas \u2014 close enough to reach on a Friday evening, far enough to feel like a genuine departure." align="center" />
+          <SectionHeader eyebrow="Location" headline="An hour south of Kansas City." subline="La Cygne, Kansas — close enough to reach on a Friday evening, far enough to feel like a genuine departure." align="center" />
           <div className="mt-8 overflow-hidden rounded">
             <a href="https://maps.google.com/?q=18103+E+2300+Ln+La+Cygne+KS+66040" target="_blank" rel="noopener noreferrer" aria-label="View Rivers Lodge location on Google Maps">
               <Image src="https://theriverslodge.com/wp-content/uploads/2022/10/Rivers_SEPT2022_-29-1.jpg" alt="Aerial view of Rivers Lodge estate showing the river, buildings, and surrounding landscape" width={1200} height={480} className="w-full object-cover hover:opacity-90 transition-opacity" quality={85} />
