@@ -1,11 +1,13 @@
 import Link from 'next/link'
 import { SITE } from '@/lib/site'
+
 const FOOTER_LINKS = {
-  Estate: [{ label: 'The Land', href: '/estate/the-land' }, { label: 'Our Story', href: '/estate/our-story' }, { label: 'Gallery', href: '/gallery' }],
-  Weddings: [{ label: 'The Experience', href: '/weddings/experience' }, { label: 'Venue Spaces', href: '/weddings/venues' }, { label: 'Packages', href: '/weddings/packages' }, { label: 'Availability', href: '/weddings/availability' }, { label: 'Begin Inquiry', href: '/weddings/inquire' }],
-  'Events & Stays': [{ label: 'Corporate Retreats', href: '/events/corporate-retreats' }, { label: 'Private Events', href: '/events/private-events' }, { label: 'Lodging', href: '/lodging' }, { label: 'Book a Tour', href: '/contact' }],
-  Membership: [{ label: 'The Experience', href: '/membership/experience' }, { label: 'Privileges', href: '/membership/privileges' }, { label: 'The Seasons', href: '/membership/seasons' }, { label: 'Apply', href: '/membership/apply' }, { label: 'Member Login', href: '/login' }],
+  Estate: [{ label: 'The Land', href: '/estate' }, { label: 'Our Story', href: '/estate' }, { label: 'Gallery', href: '/gallery' }],
+  Weddings: [{ label: 'The Experience', href: '/weddings' }, { label: 'Venue Spaces', href: '/weddings#venue-spaces' }, { label: 'Availability', href: '/weddings#availability' }, { label: 'Begin Inquiry', href: '/contact' }],
+  'Events & Stays': [{ label: 'Corporate Retreats', href: '/events' }, { label: 'Private Events', href: '/events' }, { label: 'Lodging', href: '/lodging' }, { label: 'Book a Tour', href: '/contact' }],
+  Membership: [{ label: 'The Experience', href: '/membership' }, { label: 'Privileges', href: '/membership' }, { label: 'The Seasons', href: '/membership' }, { label: 'Apply', href: '/contact' }, { label: 'Member Login', href: '/login' }],
 }
+
 export function SiteFooter() {
   const year = new Date().getFullYear()
   return (
