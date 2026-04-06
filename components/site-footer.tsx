@@ -2,10 +2,10 @@ import Link from 'next/link'
 import { SITE } from '@/lib/site'
 
 const FOOTER_LINKS = {
-  Estate: [{ label: 'The Land', href: '/estate' }, { label: 'Our Story', href: '/estate' }, { label: 'Gallery', href: '/gallery' }],
+  Estate: [{ label: 'The Land', href: '/estate' }, { label: 'Wildlife & Habitat', href: '/estate' }, { label: 'Gallery', href: '/gallery' }],
   Weddings: [{ label: 'The Experience', href: '/weddings' }, { label: 'Venue Spaces', href: '/weddings#venue-spaces' }, { label: 'Availability', href: '/weddings#availability' }, { label: 'Begin Inquiry', href: '/contact' }],
   'Events & Stays': [{ label: 'Corporate Retreats', href: '/events' }, { label: 'Private Events', href: '/events' }, { label: 'Lodging', href: '/lodging' }, { label: 'Book a Tour', href: '/contact' }],
-  Membership: [{ label: 'The Experience', href: '/membership' }, { label: 'Privileges', href: '/membership' }, { label: 'The Seasons', href: '/membership' }, { label: 'Apply', href: '/contact' }, { label: 'Member Login', href: '/login' }],
+  'Hunt Club & Membership': [{ label: 'Hunting & Fishing', href: '/membership' }, { label: 'The Seasons', href: '/membership' }, { label: 'Privileges', href: '/membership' }, { label: 'Apply', href: '/contact' }, { label: 'Member Login', href: '/login' }],
 }
 
 export function SiteFooter() {
@@ -18,7 +18,7 @@ export function SiteFooter() {
             <Link href="/" className="inline-block font-display font-light text-2xl text-cream tracking-[0.06em] mb-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brass rounded">Rivers Lodge</Link>
             <p className="font-body text-sm text-cream/60 leading-relaxed max-w-xs mb-6">A private estate on over 300 acres along the {SITE.location.river} River. {SITE.location.city}, {SITE.location.state}.</p>
             <a href={`mailto:${SITE.contact.email}`} className="block font-body text-sm text-cream/60 hover:text-cream transition-colors duration-150">{SITE.contact.email}</a>
-            <div className="mt-6"><a href={SITE.social.instagram} target="_blank" rel="noopener noreferrer" className="font-mono text-xs tracking-widest text-cream/40 hover:text-cream/80 transition-colors duration-150 uppercase">Instagram</a></div>
+            <div className="mt-6"><a href={SITE.social.instagram} target="_blank" rel="noopener noreferrer" className="font-mono text-xs tracking-widest text-cream/40 hover:text-cream/80 uppercase transition-colors duration-150">Instagram</a></div>
           </div>
           {Object.entries(FOOTER_LINKS).map(([category, links]) => (
             <div key={category}>
