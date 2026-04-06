@@ -9,10 +9,10 @@ import { Tag } from '@/components/ui/tag'
 export const metadata: Metadata = buildMetadata({ title: 'Membership', description: 'Private membership at Rivers Lodge and Hunt Club.', path: '/membership' })
 export const revalidate = 300
 const SEASONS = [
-  { label: 'Whitetail Deer', period: 'September — January', description: 'The property holds a healthy resident herd. Managed stands throughout the timber and field edges, with cell cam monitoring updated to the member portal throughout the season.', imageSrc: 'https://theriverslodge.com/wp-content/uploads/2023/03/Rivers_SEPT2022_-238-1.jpg', imageAlt: 'Whitetail buck in the south field at dusk', status: 'open' as const },
-  { label: 'Waterfowl', period: 'November — February', description: 'The Marais des Cygnes corridor is a natural migration flyway. Blind access, decoy equipment, and guided options available to members through the peak of the migration.', imageSrc: 'https://theriverslodge.com/wp-content/uploads/2023/03/Rivers_SEPT2022_-238-1.jpg', imageAlt: 'Duck marsh at sunrise', status: 'open' as const },
-  { label: 'Turkey', period: 'April — May', description: 'Spring turkey on the property is a genuine experience. The timber edges and food plots concentrate birds. Walk-in access with guide options available.', imageSrc: 'https://theriverslodge.com/wp-content/uploads/2023/03/Rivers_SEPT2022_-238-1.jpg', imageAlt: 'Tom turkey in the field at sunrise', status: 'upcoming' as const },
-  { label: 'Fishing', period: 'Year-round', description: 'The Marais des Cygnes holds largemouth bass, channel catfish, and crappie year-round. Bank access and guided float options available to members.', imageSrc: 'https://theriverslodge.com/wp-content/uploads/2023/03/Rivers_SEPT2022_-238-1.jpg', imageAlt: 'Fishing on the Marais des Cygnes River', status: 'open' as const },
+  { label: 'Whitetail Deer', period: 'September — January', description: 'The property holds a healthy resident herd. Managed stands throughout the timber and field edges, with cell cam monitoring updated to the member portal throughout the season.', imageSrc: 'https://theriverslodge.com/wp-content/uploads/2022/11/Rivers_SEPT2022_-238-1.jpg', imageAlt: 'Whitetail buck in the south field at dusk', status: 'open' as const },
+  { label: 'Waterfowl', period: 'November — February', description: 'The Marais des Cygnes corridor is a natural migration flyway. Blind access, decoy equipment, and guided options available to members through the peak of the migration.', imageSrc: 'https://theriverslodge.com/wp-content/uploads/2022/11/Rivers_SEPT2022_-238-1.jpg', imageAlt: 'Duck marsh at sunrise', status: 'open' as const },
+  { label: 'Turkey', period: 'April — May', description: 'Spring turkey on the property is a genuine experience. The timber edges and food plots concentrate birds. Walk-in access with guide options available.', imageSrc: 'https://theriverslodge.com/wp-content/uploads/2022/11/Rivers_SEPT2022_-238-1.jpg', imageAlt: 'Tom turkey in the field at sunrise', status: 'upcoming' as const },
+  { label: 'Fishing', period: 'Year-round', description: 'The Marais des Cygnes holds largemouth bass, channel catfish, and crappie year-round. Bank access and guided float options available to members.', imageSrc: 'https://theriverslodge.com/wp-content/uploads/2022/11/Rivers_SEPT2022_-238-1.jpg', imageAlt: 'Fishing on the Marais des Cygnes River', status: 'open' as const },
 ]
 const PRIVILEGES = [
   { label: 'Priority booking', body: 'Members book lodging and guided experiences before the general calendar opens.' },
@@ -25,7 +25,7 @@ const PRIVILEGES = [
 export default function MembershipPage() {
   return (
     <>
-      <HeroFull imageSrc="https://theriverslodge.com/wp-content/uploads/2023/03/Rivers_SEPT2022_-238-1.jpg" imageAlt="Aerial view of The Lodge at Rivers Lodge estate" eyebrow="Private Membership" headline="The property, season after season." subline="Access to the land, the water, and the people who take it seriously." height="full" showScroll actions={[{ label: 'Explore Membership', href: '#privileges', variant: 'ghost-dark' }]} />
+      <HeroFull imageSrc="https://theriverslodge.com/wp-content/uploads/2022/11/Rivers_SEPT2022_-238-1.jpg" imageAlt="Aerial view of The Lodge at Rivers Lodge estate" eyebrow="Private Membership" headline="The property, season after season." subline="Access to the land, the water, and the people who take it seriously." height="full" showScroll actions={[{ label: 'Explore Membership', href: '#privileges', variant: 'ghost-dark' }]} />
       <Section background="cream">
         <Container width="prose" className="text-center">
           <p className="eyebrow mb-5">Membership at Rivers Lodge</p>
@@ -62,7 +62,7 @@ export default function MembershipPage() {
           </div>
         </Container>
       </Section>
-      <EditorialSplit imageSrc="https://theriverslodge.com/wp-content/uploads/2023/03/Rivers_SEPT2022_-238-1.jpg" imageAlt="Lodge at dusk" imageLeft={false} eyebrow="How it works" headline="Membership is reviewed personally." body={['There is no membership tier page or instant-access form. The application takes five minutes. A member of our team follows up within 48 hours — personally.', 'Pricing is disclosed during that conversation. This is intentional. The right membership is built around how you plan to use the property.']} actions={[{ label: 'Apply for membership', href: '/membership/apply', variant: 'ghost' }]} />
+      <EditorialSplit imageSrc="https://theriverslodge.com/wp-content/uploads/2022/11/Rivers_SEPT2022_-238-1.jpg" imageAlt="Lodge at dusk" imageLeft={false} eyebrow="How it works" headline="Membership is reviewed personally." body={['There is no membership tier page or instant-access form. The application takes five minutes. A member of our team follows up within 48 hours — personally.', 'Pricing is disclosed during that conversation. This is intentional. The right membership is built around how you plan to use the property.']} actions={[{ label: 'Apply for membership', href: '/membership/apply', variant: 'ghost' }]} />
       <Section background="soil">
         <Container width="content" className="text-center">
           <p className="eyebrow text-cream/40 mb-5">Ready to apply?</p>
